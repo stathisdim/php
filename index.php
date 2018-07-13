@@ -11,12 +11,38 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+
+   <div class="container-fuid">
+      
+      <nav class="navbar bg-info navbar-info navbar-expand-sm">
+              <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+       <div class="container">
+       <a href="index.php" class="navbar-brand text-warning d-none d-sm-inline">Widget Corp</a>
+       <div class="collapse ml-sm-auto navbar-collapse" id="navbarTogglerDemo01">
+        <div class="navbar-nav ml-sm-auto " >
+          <a class="nav-item nav-link active text-white "href="#">Home</a>
+          <a class="nav-item nav-link text-light "href="#">Info</a>
+          <a class="nav-item nav-link text-light "href="#">About</a>
+            <div class="dropdown">
+                <a class="nav-item nav-link text-light dropdown-toggle id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Products</a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Product 1</a>
+                        <a class="dropdown-item" href="#">Product 2</a>
+                        <a class="dropdown-item" href="#">Product 3</a>
+                    </div>
+            </div>
+          <a class="nav-item nav-link text-light "href="#">Contact Us</a>
+        </div>
+      </div>
+       </div>
+       </nav>
 
 
 
 
-tyhdfty
 
 
 
@@ -36,7 +62,7 @@ tyhdfty
 
 
 
-
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
