@@ -8,7 +8,9 @@
                         confirm_query($result);    /*   fuction called to confirm if db query is ok!  */
 ?>
 
-<?php   if(isset($_GET["subject"]))  {
+<?php   
+
+if(isset($_GET["subject"]))  {
    $selected_page_id = null;
  $selected_subject_id = $_GET["subject"];
 
@@ -45,7 +47,7 @@
 
                             <?php while ($subject = mysqli_fetch_assoc($subject_set)){ ?>
                             <div class="dropdown">
-                            <a class='nav-item nav-link text-light dropdown-toggle float-left' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true' href=manage-content.php?subject=<?php  echo urlencode($subject["id"]) ;  ?>'> <?php  echo $subject["menu_name"];  ?> </a> 
+                            <a class='nav-item nav-link text-light dropdown-toggle float-left ' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true' href=manage-content.php?subject=<?php  echo urlencode($subject["id"]) ;  ?>'> <?php  echo $subject["menu_name"];  ?> </a> 
 
 
 
@@ -60,7 +62,21 @@
 
                                <?php while ($page = mysqli_fetch_assoc($page_set)){
                                 ?>
-                              <a class='dropdown-item' href=manage-content.php?page=<?php echo urlencode($page["id"]) ;   ?>> <?php echo $page["menu_name"]  ;  ?> </a>
+                              <a class='dropdown-item 
+
+
+
+                              <?php  
+
+
+                              if($page["id"] == $selected_page_id){
+
+                                echo ' font-weight-bold';
+
+                              }
+
+
+                               ?>' href=manage-content.php?page=<?php echo urlencode($page["id"]) ;   ?>> <?php echo $page["menu_name"]  ;  ?> </a>
 
                               <?php
 
